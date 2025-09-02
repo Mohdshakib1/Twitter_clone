@@ -26,7 +26,7 @@ const Signup = () => {
         name: name,
         email: email,
       };
-      fetch("http://localhost:5000/register", {
+      fetch("https://twitter-clone-qup2.onrender.com/register", {
         method: "POST",
         headers: {
           "content-type": "application/json",

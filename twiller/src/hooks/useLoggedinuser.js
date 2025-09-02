@@ -8,7 +8,7 @@ const useLoggedinuser = () => {
 
   useEffect(() => {
     if (!email) return; // prevent fetch if email is null/undefined
-    fetch(`http://localhost:5000/loggedinuser?email=${email}`)
+    fetch(`https://twitter-clone-qup2.onrender.com/loggedinuser?email=${email}`)
       .then((res) => res.json())
       .then((data) => {
         setloggedinuser(data);

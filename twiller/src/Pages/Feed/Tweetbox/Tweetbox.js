@@ -72,7 +72,7 @@ const Tweetbox = () => {
 
     // check if logged-in user is email/password provider
     if (user?.providerData[0]?.providerId === "password") {
-      fetch(`http://localhost:5000/loggedinuser?email=${email}`)
+      fetch(`https://twitter-clone-qup2.onrender.com/loggedinuser?email=${email}`)
         .then((res) => res.json())
         .then((data) => {
           setname(data[0]?.name);
@@ -101,7 +101,7 @@ const Tweetbox = () => {
       setimageurl("");
 
       // send to backend
-      fetch("http://localhost:5000/post", {
+      fetch("https://twitter-clone-qup2.onrender.com/post", {
         method: "POST",
         headers: {
           "content-type": "application/json",
